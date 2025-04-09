@@ -19,7 +19,7 @@ Esse fallback duplo garante maior compatibilidade e evita bloqueios.
 
 Antes de tudo, certifique-se de:
 
-1. Ter o [.NET SDK](https:dotnet.microsoft.comen-usdownload) instalado  
+1. Ter o [.NET SDK](https://dotnet.microsoft.com/download) instalado  
 2. Instalar a ferramenta WiX globalmente:
    ```bash
    dotnet tool install --global wix
