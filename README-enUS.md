@@ -15,7 +15,7 @@ This fallback ensures compatibility across systems.
 
 ## 📦 Requirements
 
-1. Install [.NET SDK](https:dotnet.microsoft.comen-usdownload)  
+1. Install [.NET SDK](https://dotnet.microsoft.com/download)  
 2. Install WiX globally:  
    ```bash
    dotnet tool install --global wix
