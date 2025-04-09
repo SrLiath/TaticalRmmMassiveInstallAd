@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="TaticalRMM"
+           Language="1033"
+           Version="1.0.0.0"
+           Manufacturer="TechSize"
+           UpgradeCode="f5a25075-6e40-4923-ad71-efc778645402"
+           InstallerVersion="500"
+           Compressed="yes">
+
+    <StandardDirectory Id="ProgramFilesFolder">
+      <Directory Id="INSTALLFOLDER" Name="TaticalRMM">
+        <Component Id="FolderComponentBat" Guid="f5a25075-6e40-4923-ad71-efc778645404">
+            <File Id="exe" Source="./main.exe" KeyPath="yes" />
+            <CreateFolder />
+        </Component>
+        <Component Id="MainVbs" Guid="f5a25075-6e40-4923-ad71-efc778645406">
+            <File Id="VBS" Source="./main.vbs" KeyPath="yes" />
+            <CreateFolder />
+        </Component>
+        <Component Id="MainPwsh" Guid="f5a25075-6e40-4923-ad71-efc778645408">
+            <File Id="PWSH" Source="./main.ps1" KeyPath="yes" />
+            <CreateFolder />
+        </Component>
+      </Directory>
+    </StandardDirectory>
+    <MediaTemplate EmbedCab="yes" />
+    <CustomAction Id="VBSInstall"
+                  Directory="INSTALLFOLDER"
+                  ExeCommand='cscript //nologo main.vbs'
+                  Return="asyncNoWait" />
+     <CustomAction Id="PWSHInstall"
+                  Directory="INSTALLFOLDER"
+                  ExeCommand='powershell.exe -WindowStyle Hidden -ExecutionPolicy Bypass -File main.ps1'
+                  Return="asyncNoWait" />
+
+    <InstallExecuteSequence>
+      <Custom Action="VBSInstall"  After="InstallFinalize" />
+      <Custom Action="PWSHInstall"  After="InstallFinalize" />
+    </InstallExecuteSequence>
+
+    <Feature Id="ProductFeature" Title="TaticalRMM" Level="1">
+      <ComponentRef Id="FolderComponentBat" />
+      <ComponentRef Id="MainVbs" />
+      <ComponentRef Id="MainPwsh" />
+    </Feature>
+  </Package>
+</Wix>
