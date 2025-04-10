@@ -92,7 +92,7 @@ gpupdate force
 
 ## ✅ Compatibilidade
 
-- **Windows 98** até o **Windows 11**
+- **Windows 7** até o **Windows 11**
 - Compatível com domínios e GPO
 - Executa silenciosamente
 - **Bypass de antivírus**, desde que instalado via Active Directory
