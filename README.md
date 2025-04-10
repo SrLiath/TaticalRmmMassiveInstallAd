@@ -1,6 +1,6 @@
 - 🇺🇸 [English - US](./README-enUS.md)
 
-Este projeto tem como objetivo **instalar em massa o Tactical RMM Agent, o Mesh Agent e o NextTime** em computadores com **Windows 98 até versões atuais**, utilizando **Active Directory (AD)** para distribuir o instalador .msi de forma automática, silenciosa e indetectável por antivírus (quando instalado via AD).
+Este projeto tem como objetivo **instalar em massa o Tactical RMM Agent, o Mesh Agent e o NextTime** em computadores com **Windows 7 até versões atuais** (msi funciona da 98 para cima), utilizando **Active Directory (AD)** para distribuir o instalador .msi de forma automática, silenciosa e indetectável por antivírus (quando instalado via AD).
 
 ---
 
