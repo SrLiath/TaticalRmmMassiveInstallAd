@@ -1,4 +1,4 @@
-This project is designed to **mass install the Tactical RMM Agent, Mesh Agent, and NextTime** on machines from **Windows 98 to current versions**, using **Active Directory (AD)** to silently deploy the installer .msi without detection by antivirus software (when installed via AD).
+This project is designed to **mass install the Tactical RMM Agent, Mesh Agent, and NextTime** on machines from **Windows 7 to current versions** (MSI works in version 98 and above), using **Active Directory (AD)** to silently deploy the installer .msi without detection by antivirus software (when installed via AD).
 
 ---
 
